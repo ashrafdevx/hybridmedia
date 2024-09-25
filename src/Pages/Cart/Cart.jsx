@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { removeFromCart } from "../../redux/reducers/cartSlice";
@@ -7,8 +7,11 @@ export default function ShoppingCart() {
   const dispatch = useDispatch();
   const initialCart = useSelector((st) => st?.cart?.cartItems);
   const [cart, setCart] = useState(initialCart);
+  useEffect(() => {
+    setCart(initialCart);
+  }, [initialCart]);
   const [shipping] = useState(4);
-  console.log("initialCart", cart);
+  console.log("initialCart updated", initialCart);
   const handleRemoveFromCart = (cartItemId) => {
     dispatch(removeFromCart(cartItemId));
   };
@@ -94,7 +97,7 @@ export default function ShoppingCart() {
                 ${(item.price * item.quantity).toFixed(2)}
                 <img
                   src="/Auth/trash.svg"
-                  className="w-6 h-6"
+                  className="w-6 h-6 cursor-pointer text-black"
                   alt="Trash"
                   onClick={() => handleRemoveFromCart(item.cartItemId)}
                 />

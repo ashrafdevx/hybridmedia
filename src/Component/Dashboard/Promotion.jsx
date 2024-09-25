@@ -28,13 +28,13 @@ export const PromoSection = () => {
       <div className="w-full sm:order-2 relative rounded flex col-span-4 items-center border justify-between">
         <img
           src="/Auth/womanRunning.svg"
-          className="w-1/2 absolute top-20 left-12 h-auto object-contain z-20"
+          className="w-1/2 absolute top-20 md:left-0 left-16 h-auto object-contain z-20"
           alt="Running Woman"
         />
         <img
           src="/Auth/sale.svg"
           alt="promo"
-          className="absolute object-cover w-full h-[442px] top-0 right-5"
+          className="absolute object-cover w-full max-h-[424px] h-full top-0 right-5"
         />
       </div>
     </div>

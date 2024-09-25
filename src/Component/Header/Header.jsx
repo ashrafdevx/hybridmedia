@@ -1,7 +1,9 @@
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const navigate = useNavigate();
+  const initialCart = useSelector((st) => st?.cart?.cartItems);
   return (
     <header className="   p-4 flex justify-end items-center">
       <div className="flex items-center justify-center">
@@ -14,6 +16,11 @@ export const Header = () => {
             alt="user-profile"
             className="rounded-md mr-2"
           />{" "}
+          {initialCart?.length > 0 && (
+            <span className="bg-[#89089F] rounded-full flex items-center justify-center text-white h-5 bg- px-2 mr-1">
+              {initialCart?.length}
+            </span>
+          )}{" "}
           My Cart
         </button>
       </div>
