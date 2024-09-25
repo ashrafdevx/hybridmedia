@@ -17,25 +17,25 @@ export const Sidebar = () => {
       name: "Products",
       icon: "/Auth/products.svg",
       activeIcon: "/Auth/products-active.svg",
-      path: "/",
+      path: "/product",
     },
     {
       name: "Notifications",
       icon: "/Auth/Notification.svg",
       activeIcon: "/Auth/Notification-active.svg",
-      path: "/",
+      path: "/notification",
     },
     {
       name: "Analytics",
       icon: "/Auth/analytics.svg",
       activeIcon: "/Auth/analytics-active.svg",
-      path: "/",
+      path: "/analytic",
     },
     {
       name: "Inventory",
       icon: "/Auth/inventory.svg",
       activeIcon: "/Auth/inventory-active.svg",
-      path: "/",
+      path: "/inventory",
     },
   ];
 

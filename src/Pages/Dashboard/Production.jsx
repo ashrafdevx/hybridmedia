@@ -60,16 +60,16 @@ const ProductCard = ({ cart }) => {
     dispatch(addToCart(arg));
   };
   return (
-    <div className="bg-white shadow rounded p-4">
+    <div className="bg-white shadow rounded ">
       <img
         src={cart.img}
         alt={cart.name}
-        className="w-full h-56 object-cover mb-4"
+        className="w-full p-4 h-56 object-cover mb-4"
       />
 
       <div className="flex h-[49px] justify-between mt-4">
         <button
-          className="bg-black w-full  text-white py-1 px-2  "
+          className="bg-black w-full  text-white py-1 "
           onClick={() => handleAddToCart(cart)}
         >
           Add to Cart
@@ -79,7 +79,7 @@ const ProductCard = ({ cart }) => {
         </button>
       </div>
 
-      <div className="flex border-t  justify-between mt-1">
+      <div className="flex border-t  justify-between ">
         <p className="text-black w-full py-1 px-2 font-bold uppercase">
           {cart.name}
         </p>

@@ -5,6 +5,10 @@ import { ProtectedRoute } from "./ProtectedRoute";
 import App from "../App";
 import SignUp from "../Pages/Auth/signUp/SignUp";
 import ShoppingCart from "../Pages/Cart/Cart";
+import Product from "../Pages/Product/Product";
+import Notifuication from "../Pages/Motification/notifuication";
+import Analytic from "../Component/Analytic/Analytic";
+import Inventory from "../Component/Inventory/Inventory";
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +35,22 @@ export const router = createBrowserRouter([
           {
             path: "/cart",
             element: <ShoppingCart />,
+          },
+          {
+            path: "/product",
+            element: <Product />,
+          },
+          {
+            path: "/notification",
+            element: <Notifuication />,
+          },
+          {
+            path: "/analytic",
+            element: <Analytic />,
+          },
+          {
+            path: "/inventory",
+            element: <Inventory />,
           },
         ],
       },
