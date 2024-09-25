@@ -89,7 +89,6 @@ const SingInForm = () => {
                 name="password"
                 type="password"
                 {...register("password", { required: true })}
-                required
                 class="w-full text-gray-800 text-sm border border-gray-300 rounded-lg  pl-9 py-3 outline-none"
                 placeholder="password"
               />

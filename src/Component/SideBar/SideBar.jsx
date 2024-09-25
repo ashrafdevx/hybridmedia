@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Sidebar = () => {
   // State to track the active link
   const [activeLink, setActiveLink] = useState("Dashboard");
-
+  const navigate = useNavigate();
   // Array of navigation links
   const navLinks = [
     {
@@ -79,12 +79,16 @@ export const Sidebar = () => {
         ))}
       </nav>
       <div className="mt-auto">
-        <Link
+        <button
+          onClick={() => {
+            localStorage.setItem("token", false);
+            navigate("login");
+          }}
           to="#"
           className="text-black w-[218px] flex items-start gap-2 h-[56px]  py-4 px-3 rounded"
         >
           <img src="/Auth/logout.svg" className="w-6 h-6" alt="Home" /> Logout
-        </Link>
+        </button>
       </div>
     </div>
   );
